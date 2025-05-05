@@ -5,6 +5,7 @@
     <title>Calendário Jurídico</title>
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.global.min.js"></script>
     <style>
       @font-face {
         font-family: 'Avenir';
@@ -14,12 +15,12 @@
       @font-face {
         font-family: 'AvenirBold';
         src: local('Avenir Bold'), local('Avenir'), sans-serif;
-        font-weight: 700;
+        font-weight: 500;
       }
 
       body {
         margin: 20px;
-        font-family: 'Avenir', Arial, sans-serif;
+        font-family: 'Avenir', sans-serif;
         background: #ffffff;
       }
 
@@ -42,7 +43,7 @@
       .fc .fc-toolbar-title {
         font-family: 'AvenirBold', sans-serif;
         font-weight: bold;
-        color: #C18E4B;
+        color: #0E344A;
       }
 
       .fc .fc-button {
@@ -82,19 +83,19 @@
 
         const calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'dayGridMonth',
+          locale: 'pt-br',
           headerToolbar: {
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
           },
           buttonText: {
-            today:    'Hoje',
-            month:    'Mês',
-            week:     'Semana',
-            day:      'Dia',
-            list:     'Lista'
+            today: 'Hoje',
+            month: 'Mês',
+            week: 'Semana',
+            day: 'Dia',
+            list: 'Lista'
           },
-          locale: 'pt-br',
           height: 'auto',
           events: `https://www.limpaimovel.com.br/_functions/listarEventoDoImovel/${imovelId}`,
           eventDidMount: function(info) {
@@ -125,6 +126,8 @@
       });
     </script>
   </body>
+</html>
+
 </html>
 
 
