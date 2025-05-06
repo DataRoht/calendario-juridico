@@ -123,13 +123,14 @@
         });
 
         calendar.render();
+
+        // 🔁 Listener para atualizar eventos dinamicamente via postMessage
+        window.addEventListener("message", (event) => {
+          if (event.data.action === "recarregar") {
+            calendar.refetchEvents();
+          }
+        });
       });
     </script>
   </body>
 </html>
-
-</html>
-
-
-
-
